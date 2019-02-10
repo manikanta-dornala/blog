@@ -1,0 +1,165 @@
+<p>Overview</p>
+<p>Pain is one of the most important aspects, that has to be properly managed, for easing the suffering of a patient and improve their quality of life. Pain management is typically done through the administration of narcotics, which also bring with them other unwanted effects. On the other hand introducing pain management catheters<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, that block or mitigate the pain at source, reduce dependency on the narcotics and speed up the recovery process. We will discuss the problem of identifying nerve structures in the region around neck so that the indwelling catheters are rightly placed and provide a pain free future.</p>
+<p>Accurately identifying the nerve structures, also called the <em>Brachial Plexus</em><a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>, in the ultrasound images of the region around the neck can be modeled as an image segmentation problem. By placing the nerve structure in one class and the rest in the contrary, the problem is further simplified to a binary classification problem. Many methods exist to perform binary image segmentation, ranging from simple threshold based approaches to ones that use very deep neural networks. We will be discussing a method based on proposals by overlapping windows and the other, based on the U-net architecture<a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a>. We will also look into how the choice of architecture of the neural net, makes the learning different in the deeper layers.</p>
+<h1 id="introduction">Introduction</h1>
+<p>The goal of any image segmentation algorithm is to represent the image in a more meaningful manner and to identify structures and boundaries around them. In its simplest form segmentation is assigning class labels to every pixel in the image. We’ll be segmenting ultrasound images of a region around the neck.</p>
+<h2 id="problem">Problem</h2>
+<p>The region of our interest is a collection of nerve structures called <em>Brachial Plexus</em>, which extends over the spinal cord, through the neck and into the armpit.</p>
+<div class="figure">
+<img src="Brachial_Plexus.jpg" alt="Brachial Plexus" width="453" />
+<p class="caption">Brachial Plexus</p>
+</div>
+<p>Identifying the accurate location of this nerve structure is a critical step in inserting the patients pain management catheter. The problem is posted as a challenge on <em>Kaggle</em><a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a> to build a model that can locate the plexus in a dataset of ultrasound images of the neck.</p>
+<h1 id="data">Data</h1>
+<p>The dataset provided consists of large training set of ultrasound images, in which the nerve structure is manually annotated by trained experts. The experts make their mark on the basis of their confidence of existence of BP in the image.</p>
+<p>Given below are two images, one is the ultra sound image itself and the other is the human annotation.<br />
+<span>0.5</span> <img src="47_117.png" title="fig:" alt="Sample Data from training set [Id : 47_117]" height="188" /></p>
+<p><span>0.5</span> <img src="47_117_mask.png" title="fig:" alt="Sample Data from training set [Id : 47_117]" height="188" /></p>
+<p>The white region represents our region of interest. The model which we will build has to take the gray scale ultrasound image on the left as input and output a binary mask, similar to the binary image on the right. It has to be noted that the output is not gray scale. The intensities will be exclusively either 0 or 255.</p>
+<div class="figure">
+<img src="red_overlay.png" alt="Image with overlay Notice the red boundary over the region of interest" />
+<p class="caption">Image with overlay<br />
+Notice the red boundary over the region of interest<span data-label="fig:overlayimage"></span></p>
+</div>
+<p>Priori analysis of the data reveals that about 60% of the images do not posses a mask, implying that they have no BP landmark. Hence we might not worry about the statistical bias in the supply of data.</p>
+<p>Other notable key points about the dataset,</p>
+<ul>
+<li><p>Image size: 580x420 pixels</p></li>
+<li><p>5635 training images</p></li>
+<li><p>5508 testing images</p></li>
+<li><p>Noise and other artifacts present</p></li>
+<li><p>Repetition of the images</p></li>
+</ul>
+<h2 id="inconsistencies-in-the-data-set">Inconsistencies in the Data-set</h2>
+<p>There are potential mistakes in the ground truth of the data. By this we mean that there are images, which are very similar to each other yet have differing masks<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a>.</p>
+<p>One of the images has a mask while the other doesn’t and due to the nature of loss function we use for this problem, false positives and false negatives are penalized heavily.</p>
+<p>The occurrence of such contrary images is highly likely in the test data-set provided. Coupled with the loss function, this particular empirical observation sets an upper bound on the results.</p>
+<p>Another aspect of the image generation is the way they are produced. It seems that the images are frames of the ultrasound video feed, due to which we encounter multiple images which are actually the same frame. <a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a></p>
+<h2 id="dice-coefficient">Dice Coefficient</h2>
+<p>It has been suggestedthat <em>Dice coefficient</em> be used as an error measure. Given two sets <span class="math inline"><em>A</em></span> and <span class="math inline"><em>B</em></span>, dice index of them is, <br /><span class="math display">$$Q =
+\left\{
+    \begin{array}{ll}
+            \frac{|A\cap B|}{|A| + |B|} &amp; \mbox{if } A\neq\phi | B\neq\phi \\
+            1 &amp; \mbox{otherwise}
+    \end{array}
+\right.$$</span><br /> This function penalizes any kind of wrong predictions. Just capturing the where and what is not enough, the prediction and truth have to be highly correlated. It is necessary that the binary outputs look as good as the real ones.</p>
+<h1 id="data-pre-processing">Data Pre Processing</h1>
+<p>In order to minimize the inherent inconsistencies, we pre process the whole of the data-set.</p>
+<h2 id="image-down-scaling">Image Down Scaling</h2>
+<p>The images have been scaled down from 580x420 to 128x128. Other scales haven’t been tested and could perform better. The reason to choose this scale is largely for programmatic ease and to avoid memory overflows in the system that’s been used. <a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a></p>
+<h2 id="removal-of-inconsistent-data">Removal of Inconsistent data</h2>
+<p>In order to minimize contradictory data, we will remove all such pairs of images from data-set, which although are morphologically similar posses different label masks.</p>
+<p>The closeness of two images was determined using cosine distance over block histograms of the images. Instead of dropping such images, propagating the masks over to the empty one, was also tried, but this didn’t offer any convincing spike in the prediction power and rather degraded performance.</p>
+<h2 id="generating-more-data">Generating More Data</h2>
+<p>One of the main advantages of working on medical images is that the objects of interest in the images are organic. They are indifferent to distortions and warping. Therefore we can freely transform the images by slightly changing them (Apply small affine transformations) to generate a completely different image that although different, can still be considered as a valid image for training. This compensates for the images we dropped previously.</p>
+<h1 id="sliding-window-proposals">Sliding Window Proposals</h1>
+<p>This method is based on the idea that, the label a pixel will take depends on who its neighbors are and what labels they are taking. In order to encapsulate the information about what and how the neighbors of a pixel are doing, we consider a window around the pixel and map the pixels to a functional value and then use this functional value as a measure of confidence the window has, in the pixel, towards a particular class.</p>
+<p><span>0.5</span> <img src="Selection_001.png" title="fig:" alt="Window Illustration [Id : 1_85]" height="188" /></p>
+<p><span>0.5</span> <img src="Selection_002.png" title="fig:" alt="Window Illustration [Id : 1_85]" height="188" /></p>
+<p><br />
+In the figures above, both the images have the window overlay, in white, at the same location. We call such windows <em>corresponding</em> windows. They are capturing information from the same region, albeit in a different plane.</p>
+<h2 id="sliding-windows">Sliding Windows</h2>
+<p>We’ll consider <span class="math inline"><em>w</em></span> as the window in the ultrasound image, or <span class="math inline"><em>x</em></span>, and <span class="math inline"><em>w</em><sub><em>m</em><em>a</em><em>s</em><em>k</em></sub></span> as the corresponding window in the mask image, or <span class="math inline"><em>y</em></span>. Every pixel in the image has some intensity value given by some intensity function <span class="math inline"><em>I</em> : <em>p</em><sub><em>i</em></sub> → (0, 255)</span>. The window(<span class="math inline"><em>w</em></span>) will contain some finite number of pixels and can be written as a set of all the pixels in the window as <br /><span class="math display"><em>w</em> = {<em>p</em><sub><em>i</em></sub>/<em>p</em><sub><em>i</em></sub> ∈ <em>w</em>}</span><br /> or in a vector form as <br /><span class="math display">$$w = (I(p_1), I(p_2), ..., I(p_i), ...). \#\footnotemark$$</span><br /> Henceforth, <span class="math inline"><em>w</em><sub><em>j</em></sub></span> will be the window in mask and <span class="math inline"><em>w</em><sub><em>m</em><em>a</em><em>s</em><em>k</em></sub><sub><em>j</em></sub></span> is the corresponding window in the mask and <span class="math inline"><em>W</em></span> be range space of all windows. We can see that all windows over an image will therefore be unique sets of pixels. These sets may overlap, that is, a pixel can be present in multiple windows.<br />
+In our method, we try to build two functions <span class="math inline"><em>Γ</em> : <em>W</em> → [0, 1]</span> and <span class="math inline"><em>Θ</em> : <em>W</em> → [0, 1]</span> such that <br /><span class="math display"><em>Γ</em>(<em>w</em><sub><em>j</em></sub>)=<em>Θ</em>(<em>w</em><sub><em>m</em><em>a</em><em>s</em><em>k</em></sub><sub><em>j</em></sub>)</span><br /></p>
+<p>For our problem we define <span class="math inline"><em>Θ</em></span> as the mean of binary values of pixels in the window. <br /><span class="math display">$$\Theta({w_{mask}}_j) = \frac{\sum\limits_{p_i \in {w_{mask}}_j}^n I(p_i)}{n}$$</span><br /> We approximate <span class="math inline"><em>Γ</em></span> as a logistic regression model and learn it through training which can be setup easily by dividing the images into sliding boxes with overlapping (some stride length). These boxes can be considered as windows.<br />
+<span class="math inline"><em>Θ</em></span> in a practical sense gives us an idea of how much interesting region it contains. <span class="math inline"><em>Γ</em></span> then tries to figure out what feature of the original pixels generates such interesting region. <span class="math inline"><em>Γ</em>(<em>w</em>)</span> is the probability that the window has some mask.<br />
+By the end of this we land up with <span class="math inline"><em>Γ</em></span>, a function capable of predicting how much of the window belongs to the region of interest.</p>
+<h2 id="the-proposals">The Proposals</h2>
+<p>If we are able to somehow predict the class of a pixel our problem is done. We have already devised a way of relating the windows to region of interests. We now try to devise a way to use the information about windows for pixels.</p>
+<p>Every pixel in the image will belong to some finite number of windows, owing to the way how the windows are built. Every such window will capture some neighborhood of our pixel. Thus windows can be considered good representatives of the neighborhoods of the pixel. Any operation the window is an operation on the neighborhood.</p>
+<p>If a pixel neighborhood holds some property, it is very <em>likely</em> that the property will hold for the pixel too. If windows have some probability of having some mask, so does the pixel. A window makes a proposal for a pixel to be a pixel in region of interest.</p>
+<p>Since a pixel can belong to multiple windows, multiple neighborhoods have an affect on it simultaneously. We now make an important assumption that multiple neighborhoods affect the pixel <em>independently</em>.</p>
+<p>Thus using the above arguments, we define the probability<span class="math inline">(<em>P</em>(<em>p</em><sub><em>i</em></sub>))</span> that a pixel <span class="math inline"><em>p</em><sub><em>i</em></sub></span> will be a pixel in region of interest as <br /><span class="math display">$$P(p_i) = \prod\limits_{p_i \in w_j} \Gamma(w_j)$$</span><br /> Using this probability as a measure and by choosing appropriate thresholds, we can generate masks for any ultrasound image.</p>
+<h1 id="neural-networks">Neural Networks</h1>
+<h2 id="encoder-decoder">Encoder-Decoder</h2>
+<p>We are motivated by a simple desire to preserve spatial locality of the region of interest in the context of the entire image. We built a simple Encoder-Decoder network to do the same.</p>
+<p>We hope that the network learns a representation just enough to distinguish pixels of the nerve structure from the rest.</p>
+<div class="figure">
+<img src="Autoencoder_structure.png" alt="Encoder Decoder" />
+<p class="caption">Encoder Decoder<span data-label="fig:autoencoder"></span></p>
+</div>
+<p>The network built was 4 pool layers deep with 3 convolutions in each layer. There is a simple contracting path and then a expanding path, that embed the information present in the entire image into lower dimensional vectors. The size of this vector is halved at every pool layer.</p>
+<p>Autoencoders@baldi2012autoencoders can capture the context of the image in a very good manner in the representation it learns, but doesn’t perform well when trying to learn the spatial localization present in the image.</p>
+<p>In other words, this network captures the <em>’what’</em> in the image but not the <em>’where’</em> that particular answer to ’what’ is present.</p>
+<h2 id="u-net">U-net</h2>
+<p>We understand that the encoder decoder fails at one particular learning problem, capturing the spatial localization. In order to achieve this, all we have to do is provide the spatial information as well.</p>
+<p>We do so by combining the high resolution features from the contracting path with the up-sampling features in the expanding path.</p>
+<div class="figure">
+<img src="unet.png" alt="U-net" />
+<p class="caption">U-net<span data-label="fig:unet"></span></p>
+</div>
+<p>U-net@ronneberger2015u has two parts. i) Encoder and ii) Decoder. The first part is simple convolution network that embeds the image into lower dimensional vectors. The second part is also a simple upsampling network, but, with a change.</p>
+<p>At every pooling step in the encoder network, we collect the vectors and feed them (concatenate with) the upsampled vectors from the previously layer in the decoder network. (Note the <em>Concatenate local features</em> step in the image.</p>
+<p>We are forcing the network to give emphasis on the high resolution features that are lost during the encoding step. During the contraction phase, the <em>’what’</em> in the image is highly consolidated, <em>’where’</em> is lost. The concatenation step, forces the network to relearn the <em>’where’</em>, which it ignored in the contraction.</p>
+<p>The final output will thus contain both the context and localization information in it.</p>
+<h2 id="dreams">Dreams</h2>
+<p>Dreams are a good way to visualize what the features, the filters are learning. They represent what kind of input ,<em>excites</em>, the filters. <a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a></p>
+<p><span>0.5</span> <img src="autoencoder_dream.png" title="fig:" alt="Dreams Notice the fibrous structures in U-net’s dream" height="566" /></p>
+<p><span>0.5</span> <img src="unet_dream.png" title="fig:" alt="Dreams Notice the fibrous structures in U-net’s dream" height="566" /></p>
+<p>As you can clearly see, U-net responds well to images with Brachial Plexus, something that autoencoder failed. Autoencoder would respond very well to ultrasound images of the neck, but can’t find where exactly this nerve structure is present in it.</p>
+<h1 id="post-processing">Post Processing</h1>
+<p>The output generated by any of the methods discussed is just a probability map of every pixel’s likeliness to be in the region of interest. But as the problem demands in order to score, we should have output masks that would be as close to human like annotations. In order to convert this probability map into an annotation like image we employ different techniques.</p>
+<h2 id="thresholding">Thresholding</h2>
+<p>We could simply set a threshold over the probability and generate binary outputs. But this solution, puts forward a serious problem.<br />
+<span>r</span><span>0.5</span> <img src="holes.png" alt="image" style="width:48.0%" height="188" /></p>
+<p>On what basis do we chose the threshold? Certainly it is not the visual appeal. We should also not try to train a model to learn the threshold, because if something like that were possible, it would have been picked up by the model itself (at least in the neural networks).</p>
+<p>The second problem is related to the discontinuous maps it can create. The threshold can be set in such a way that a certain region in the middle can be labeled the other way.<br />
+The problem of undesired holes can be solved by applying a <em>morphological</em> closing method, but still we would not have outputs that look human like.</p>
+<h2 id="pca-based-cleaning">PCA based cleaning</h2>
+<p>The desire to generate human-like annotations, points us to the question, what makes a mask human-like? Can we learn this too? We have many images that can teach us to generate such masks.</p>
+<p>In order to learn such features, we train a PCA model on all training masks, with region of interest. The PCA model will then give us some <em>Eigen Masks</em>, or the inner features of drawing an annotation. Using a linear combination of these eigen masks, we should be in principle able to generate masks, that look like human annotated masks.</p>
+<p><span>0.5</span> <img src="probability_mask.png" title="fig:" alt="PCA transformation of probability masks" height="188" /></p>
+<p><span>0.5</span> <img src="pca_cleaned.png" title="fig:" alt="PCA transformation of probability masks" height="188" /></p>
+<p><br />
+Results ========</p>
+<p>The results are computed by taking the mean of Dice score of the predicted masks with the annotated masks. The scores shown here are generated by kaggle.</p>
+<table>
+<caption>Average Dice Coefficients<span data-label="Tabel1"></span></caption>
+<thead>
+<tr class="header">
+<th align="left">Model</th>
+<th align="center">Best Dice Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Blank submission</td>
+<td align="center">0.53449</td>
+</tr>
+<tr class="even">
+<td align="left">Proposal Based</td>
+<td align="center">0.56527</td>
+</tr>
+<tr class="odd">
+<td align="left">Autoencoder</td>
+<td align="center">0.62322</td>
+</tr>
+<tr class="even">
+<td align="left">U-net (without PCA)</td>
+<td align="center">0.66890</td>
+</tr>
+<tr class="odd">
+<td align="left">U-net (with PCA)</td>
+<td align="center">0.68719</td>
+</tr>
+</tbody>
+</table>
+<p>A blank submission, itself gives us a score of <span class="math inline">0.53</span> indicating that about half of the images do not contain any mask.</p>
+<p>The proposal based method used windows of size <span class="math inline">30<em>x</em>30</span> at a stride length of <span class="math inline">10</span>. Experimentation with respect to window size and length is yet to be done.</p>
+<p>The auto-encoder based method was a huge jump from previous solutions, as it was capable enough to capture the nerve structures as we have seen.</p>
+<p>Introducing extra connections in the encoder-decoder network to build the U-net brought the score up by <span class="math inline">4%</span>, indicating a strong learning of localization information.</p>
+<p>Post processing using PCA cleaning definitely brought a final bump in the score by about <span class="math inline">2%</span>. A much better post processing could also work.</p>
+<h1 id="references">References</h1>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://www.med.umich.edu/1libr/Anesthesiology/PeripheralNerveCatheterWhatIstIt.pdf">Pain Management Catheters</a><a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://en.wikipedia.org/wiki/Brachial_plexus">Wikipedia: Brachial Plexus</a><a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>U-net: Convolutional networks for biomedical image segmentation@ronneberger2015u<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p><a href="https://www.kaggle.com/c/ultrasound-nerve-segmentation/">Kaggle: Ultrasound Nerve Segmentation</a><a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p><a href="https://www.kaggle.com/agalea91/ultrasound-nerve-segmentation/mislabeled-training-images/run/310043">Mislabeled Training Images</a><a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p><a href="https://www.kaggle.com/c/ultrasound-nerve-segmentation/data">Data Description</a><a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>More experimentation has to be done, before any comment is made.<a href="#fnref7">↩</a></p></li>
+<li id="fn8"><p><a href="https://blog.keras.io/category/demo.html">Deep Dreams</a><a href="#fnref8">↩</a></p></li>
+</ol>
+</div>
