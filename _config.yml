@@ -23,7 +23,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://manikantareddyd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 description: "This is about Mani, a developer, a curious mind and an amateur astronomer. I heard that you wanted to know me, so here you go."
 # twitter_username: jekyllrb
-
+keywords: "Arcane Reveries, Manikanta Reddy D"
 collections:
   work:
 
@@ -54,7 +54,16 @@ reddit: ManikantaReddyD
 skype: manikanta.reddy.d
 
 
+analytics:
+  facebook: 1974458362838018
 
+bing:
+    validate: "74C35086502D0044BAD289F68057B30D"
+
+disqus_shortname:   manikantadreddy
+
+fbcomments: 1
+fb_appid: 1166944040038372
 
 remote_theme: broccolini/swiss
 permalink: /blog/:title/
