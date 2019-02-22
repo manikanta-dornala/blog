@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Heist Complexity"
-date: 2018-09-12
-excerpt: "We'll se what is heist complexity and the ways to compute it efficiently."
+date: 2018-09-13
+excerpt: "We'll see about heist complexity and the ways to compute it efficiently."
 comments: true
 mathjax: true
 tags: algorithms graphs
