@@ -3,10 +3,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msvalidate.01" content="{{site.bing.validate}}">
-    
+
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description"
         content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
@@ -27,27 +30,32 @@
 
     <script src="{{ site.url }}/assets/prism.js" type="text/javascript"></script>
 
-<!-- Open Graph Meta Tags -->
-<meta property="og:url"                content="{{ site.url }}{{ page.url }}" />
-<meta property="og:type"               content="article" />
-<meta property="og:title"              content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
-<meta property="og:description"        content="{{ page.excerpt }}" />
-<meta property="og:image"              content="{% if page.feature %}{{site.url}}{{ page.feature }}{%else%}{{site.url}}/assets/img/blog.jpg{% endif %}" />
-<meta property="og:image:alt"              content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title"
+        content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
+    <meta property="og:description" content="{{ page.excerpt }}" />
+    <meta property="og:image"
+        content="{% if page.feature %}{{site.url}}{{ page.feature }}{%else%}{{site.url}}/assets/img/blog.jpg{% endif %}" />
+    <meta property="og:image:alt"
+        content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
 
-<!-- Facebook Tags -->
-{% if site.analytics.facebook %}<meta property="fb:app_id"              content="{{ site.analytics.facebook }}" />{% endif %}
+    <!-- Facebook Tags -->
+    {% if site.analytics.facebook %}
+    <meta property="fb:app_id" content="{{ site.analytics.facebook }}" />{% endif %}
 
-<!-- Twitter Tags -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@{{ site.twitter }}" />
-<meta name="twitter:site" content="@{{ site.twitter }}" />
-<meta name="twitter:title" content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
-<meta name="twitter:description" content="{{ page.excerpt }}" />
-<meta name="twitter:image" content="{{site.url}}{{ page.feature }}" />
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@{{ site.twitter }}" />
+    <meta name="twitter:site" content="@{{ site.twitter }}" />
+    <meta name="twitter:title"
+        content="{% if page.PageTitle %}{{ page.PageTitle }}{% else %}{{ page.title }}{%endif%}" />
+    <meta name="twitter:description" content="{{ page.excerpt }}" />
+    <meta name="twitter:image" content="{{site.url}}{{ page.feature }}" />
 
-<!-- Google Data -->
-<script type="application/ld+json">
+    <!-- Google Data -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
@@ -104,5 +112,5 @@
       "description": "{{ page.excerpt }}"
     }
     </script>
-    
+
 </head>
