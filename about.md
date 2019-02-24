@@ -14,9 +14,7 @@ sitemap:
 </h4>
 <hr class="hr-line">
 <center><p>Take a peek at <b><a href="{{site.url}}/resume/" target="_blank">me</a></b></p><center>
-<!-- <hr class="hr-line">
-{% include social.html %}
-<hr class="hr-line"> -->
+<hr>
 <center>
 	<h2>What interests me?</h2>
 </center>

@@ -14,12 +14,15 @@ sitemap:
         <b><h2>{{ item.title }}</h2></b>
     </div>
     <div class="col-lg-2">
-        <img style="width:70px" src="{{ item.logo }}" />
+        <img style="width:80px" src="{{ item.logo }}" />
     </div>
 </div>
 <div class="row">
     <div class="col-md-12"><p>{{ item.time }}</p></div>
 </div>
-<hr>
+
 {{ item.content }}
+
+<br>
 {% endfor %}
+
