@@ -4,4 +4,5 @@
 
 layout: home
 feature: "/assets/img/blog.jpg"
+PageTitle: Arcane Reveries | Manikanta Reddy D
 ---
