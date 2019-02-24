@@ -8,13 +8,9 @@
     <meta name="description"
         content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+    
 
     {% assign user_url = site.url | append: site.baseurl %}
     {% assign full_base_url = user_url | default: site.github.url %}
@@ -26,10 +22,7 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
         href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-
-    <script src="{{ site.url }}/assets/prism.js" type="text/javascript"></script>
-
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:type" content="article" />
