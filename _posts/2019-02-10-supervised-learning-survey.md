@@ -85,10 +85,10 @@ $D$ dimensional space.
 
 <div class="row">
     <div class="col-md-4">
-        <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable_2d.png" />
+        <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable_2d.png" />
     </div>
     <div class="col-md-3">
-        <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable_3d.png" />
+        <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable_3d.png" />
     </div>
 </div>
 <div class="row">
@@ -126,10 +126,10 @@ inseparable data with more complex decision boundaries.
 
 <div class="row">
     <div class="col-md-4">
-        <img src="/images/2019-02-10-supervised-learning-survey/linearly_unseperable_2d.png" />
+        <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_unseperable_2d.png" />
     </div>
     <div class="col-md-4">
-        <img src="/images/2019-02-10-supervised-learning-survey/linearly_unseperable_3d.png" />
+        <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_unseperable_3d.png" />
     </div>
 </div>
 <div class="row">
@@ -229,25 +229,25 @@ Support Vector Machines
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_ROC.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/SVC_ROC.png" class="figure-img img-fluid rounded" alt="SVC Linearly Seperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -262,25 +262,25 @@ Support Vector Machines
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_ROC.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/SVC_ROC.png" class="figure-img img-fluid rounded" alt="SVC Linearly Inseperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -310,7 +310,7 @@ classes. This was a function that computed the radius.
 <div class="row">
     <div class="col-md-3">
     <figure class="figure">
-        <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable_2d_with_k.png" class="figure-img img-fluid rounded" alt="SVC Hyper-Parameter Tuning">
+        <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable_2d_with_k.png" class="figure-img img-fluid rounded" alt="SVC Hyper-Parameter Tuning">
         <figcaption class="figure-caption ">2D inseperable data extended with a kernel</figcaption>
     </figure>
     </div>
@@ -367,25 +367,25 @@ Decision Trees
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_ROC.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/DTC_ROC.png" class="figure-img img-fluid rounded" alt="DTC Linearly Seperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -400,25 +400,25 @@ Decision Trees
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_ROC.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/DTC_ROC.png" class="figure-img img-fluid rounded" alt="DTC Linearly Inseperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -470,13 +470,13 @@ one.
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/DTC_linsep_boxes.png" class="figure-img img-fluid rounded" alt="DTC Search grids on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/DTC_linsep_boxes.png" class="figure-img img-fluid rounded" alt="DTC Search grids on Linearly Seperable">
             <figcaption class="figure-caption ">DT search grids on Linearly Seperable</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/DTC_lininsep_boxes.png" class="figure-img img-fluid rounded" alt="DTC Search grids on Linearly Inseperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/DTC_lininsep_boxes.png" class="figure-img img-fluid rounded" alt="DTC Search grids on Linearly Inseperable">
             <figcaption class="figure-caption ">DT search grids on Linearly Inseperable</figcaption>
         </figure>
     </div>
@@ -515,25 +515,25 @@ Ada-boosted Decision Trees
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_ROC.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ABC_ROC.png" class="figure-img img-fluid rounded" alt="ABC Linearly Seperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -548,25 +548,25 @@ Ada-boosted Decision Trees
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_ROC.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ABC_ROC.png" class="figure-img img-fluid rounded" alt="ABC Linearly Inseperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -598,13 +598,13 @@ and so on. A typical weight (Alpha) vs error rate would look like
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/adaboost_alphacurve.png" class="figure-img img-fluid rounded" alt="Typical Alpha Error Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/adaboost_alphacurve.png" class="figure-img img-fluid rounded" alt="Typical Alpha Error Curve">
             <figcaption class="figure-caption ">Typical Alpha Error Curve</figcaption>
         </figure>
     </div>
     <!-- <div class="col-md-8">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/ABC_error_alpha.png" class="figure-img img-fluid rounded" alt="Alpha Error Curve for our problems" width='100%'>
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/ABC_error_alpha.png" class="figure-img img-fluid rounded" alt="Alpha Error Curve for our problems" width='100%'>
             <figcaption class="figure-caption ">Alpha Error Curve for our problems</figcaption>
         </figure>
     </div> -->
@@ -665,25 +665,25 @@ K-Nearest Neighbors
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_ROC.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_ROC.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Seperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -698,25 +698,25 @@ K-Nearest Neighbors
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_ROC.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_ROC.png" class="figure-img img-fluid rounded" alt="KNNC Linearly Inseperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -773,13 +773,13 @@ testing hence it is better to look at the testing times.
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning_Testing_Time.png" class="figure-img img-fluid rounded" alt="KNN Testing Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/KNNC_Param_Tuning_Testing_Time.png" class="figure-img img-fluid rounded" alt="KNN Testing Time on Linearly Seperable">
             <figcaption class="figure-caption ">Linearly Seperable</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning_Testing_Time.png" class="figure-img img-fluid rounded" alt="KNN Testing Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/KNNC_Param_Tuning_Testing_Time.png" class="figure-img img-fluid rounded" alt="KNN Testing Time on Linearly Seperable">
             <figcaption class="figure-caption ">Linearly Ineperable</figcaption>
         </figure>
     </div>
@@ -819,25 +819,25 @@ Artificial Neural Networks
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_ROC.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/ANNC_ROC.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Seperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -852,25 +852,25 @@ Artificial Neural Networks
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable Hyper-Parameter Tuning">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Param_Tuning.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable Hyper-Parameter Tuning">
             <figcaption class="figure-caption ">Hyper-Parameter Tuning</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable  Training Times">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Param_Tuning_Training_Time.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable  Training Times">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable Learning Curve">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_Learning_Curve.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable Learning Curve">
             <figcaption class="figure-caption ">Learning Curve</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_ROC.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable ROC">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/ANNC_ROC.png" class="figure-img img-fluid rounded" alt="ANNC Linearly Inseperable ROC">
             <figcaption class="figure-caption ">ROC</figcaption>
         </figure>
     </div>
@@ -949,19 +949,19 @@ Effect of dimensions
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Testing_Score.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Score on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Testing_Score.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Score on Linearly Seperable">
             <figcaption class="figure-caption ">Testing Score</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Training_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Training Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Training_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Training Time on Linearly Seperable">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Testing_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_seperable/Dimension_Effect_Testing_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Time on Linearly Seperable">
             <figcaption class="figure-caption ">Testing Time</figcaption>
         </figure>
     </div>
@@ -976,19 +976,19 @@ Effect of dimensions
 <div class="row">
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Testing_Score.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Score on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Testing_Score.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Score on Linearly Seperable">
             <figcaption class="figure-caption ">Testing Score</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Training_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Training Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Training_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Training Time on Linearly Seperable">
             <figcaption class="figure-caption ">Training Times</figcaption>
         </figure>
     </div>
     <div class="col-md-3">
         <figure class="figure">
-            <img src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Testing_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Time on Linearly Seperable">
+            <img width="100%" src="/images/2019-02-10-supervised-learning-survey/linearly_inseperable/Dimension_Effect_Testing_Time.png" class="figure-img img-fluid rounded" alt="Effect of Dimenisons Testing Time on Linearly Seperable">
             <figcaption class="figure-caption ">Testing Time</figcaption>
         </figure>
     </div>
