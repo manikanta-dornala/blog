@@ -1,16 +1,17 @@
 ---
 PageTitle: About | Manikanta Reddy D
-layout: page
+layout: about
 title: ¯\\_(ツ)_/¯
 feature: "/images/gandalf-quote.jpg"
 permalink: /about/
+excerpt: "I'm a Research Assitant at Social Dynamics and Wellbeing Lab at Georgia Tech lead by <a href='http://www.munmund.net/' target='_blank'>Dr. Munmun De Choudhury</a>. My current work involves applying natural language processing and statistical machine learning techniques to analyze large scale social media data to understand behavioral aspects of mental health of beings. At the moment I'm trying to make sense of loads of LinkedIn data from various employees and understand their Role Ambiguity and its relationship to the stress they are put under in their work places. "
+
 sitemap:
     priority: 1
 ---
 
 <h4>
-    I'm a Research Assitant at Social Dynamics and Wellbeing Lab at Georgia Tech lead by <a href='http://www.munmund.net/' target="_blank">Dr. Munmun De Choudhury</a>. My current work involves applying natural language processing and statistical machine learning techniques to analyze large scale social media data to understand behavioral aspects of mental health of beings. At the moment I'm trying to make sense of loads of LinkedIn data from various employees and understand their Role Ambiguity and its relationship to the stress they are put under in their work places. 
-
+    
 </h4>
 <hr class="hr-line">
 <center><p>Take a peek at <b><a href="{{site.url}}/resume/" target="_blank">me</a></b></p><center>

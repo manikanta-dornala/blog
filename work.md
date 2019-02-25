@@ -1,6 +1,6 @@
 ---
 PageTitle: Work | Manikanta Reddy D
-layout: page
+layout: about
 title: "What I do!"
 feature: "/assets/img/gears.png"
 sitemap:
