@@ -24,8 +24,7 @@ sitemap:
         <div class="centered">
             <img src="{{ site.url }}/images/interests/ml.png" style="width: 64px !important; height:64px"/>
         </div>
-    <h3 class="centered"><b>Machine Learning</b></h3>
-    <h3 class="centered"><b>& Data Analysis</b></h3>
+    <h3 class="centered"><b>Data Analysis & ML</b></h3>
         <p>My favorite <i>idle time</i> activity. I find it really soothing to find patterns in everything? The ecstatic feeling you're left with, when your machine learns something better than you do, is worth all the pain and time. I always work on some short projects/ assignments, look them up!</p>
     </div>
     <div class="col-md-6">
