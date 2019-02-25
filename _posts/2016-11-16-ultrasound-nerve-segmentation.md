@@ -15,7 +15,7 @@ feature: "/images/2016-11-16-ultrasound-nerve-segmentation/feature.gif"
 ---
 
 
-## Overview
+<!-- ## Overview -->
 
 Pain is one of the most important aspects, that has to be properly
 managed, for easing the suffering of a patient and improve their quality

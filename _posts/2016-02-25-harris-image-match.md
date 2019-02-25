@@ -8,9 +8,9 @@ tags: image-processing interest-points feature-descriptors
 feature: "/images/2016-02-25-harris-image-match/feature.jpg"
 ---
 
-# Harris Point Detection and Image Matching
+<!-- # Harris Point Detection and Image Matching -->
 
-## Overview
+<!-- ## Overview -->
 
 Image matching is an intersting problem. One of the many ways to do so is to pick some interest points in the images and compare them. If such interest points 
 match its probable that the images match. By match we don't mean an exact match, just that the images are speaking of the same scene or the same subject from 

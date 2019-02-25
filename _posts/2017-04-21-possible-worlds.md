@@ -16,7 +16,7 @@ feature: "/images/2017-04-21-possible-worlds/feature.jpg"
 ---
 
 
-## Introduction
+<!-- ## Introduction -->
 
 We seem to be directly aware
 of our immediate world somehow. How far does this immediate world

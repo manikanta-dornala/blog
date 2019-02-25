@@ -10,7 +10,7 @@ mathjax: true
 tags: Ubicomp Healthcare
 ---
 
-<h2>Introduction</h2>
+<!-- <h2>Introduction</h2> -->
 
 Traditional healthcare involves point-of-care situations where a physician is physically involved. But with
 improvements in pervasive sensing capabilities, we can achieve a sense of ubiquitous care for ourwellbeing. Use of new

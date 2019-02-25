@@ -17,7 +17,7 @@ feature: "/images/2016-04-09-can-we-discriminate/feature.gif"
 
 ---
 
-## Introduction
+<!-- ## Introduction -->
 
 
 We provide a survey of human sex recognition using computer vision
