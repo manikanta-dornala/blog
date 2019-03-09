@@ -1,5 +1,6 @@
 <!-- Renders post date, title, and snippet of text. -->
-<div class="py-2 mb-2 prose">{% assign wpm = site.words_per_minute | append: '.0' %}
+<div class="py-2 mb-2 prose">
+    {% assign wpm = site.words_per_minute | append: '.0' %}
 {% assign readtime = post.content | strip_html | number_of_words | divided_by:wpm | round %}
 
     <h2 class="h1 lh-condensed col-12 mt-0">
