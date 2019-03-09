@@ -53,6 +53,13 @@
                         <p class="mb-3 py-2 bold h4">
                                 Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}
                         </p>
+                        <div style="overflow: hidden;">
+                            <div class="tags" style="white-space: nowrap; overflow-x: auto; overflow-y:hidden; width: 100%; height: 50px">
+                                Tags: {% for tag in page.tags %}
+                                <a href="/tag/{{tag}}"><button class="btn btn-link" style="padding: 5px;">{{tag}}</button></a>
+                                {%endfor%}
+                            </div>
+                        </div>
                     </div>
                 </div>
 
