@@ -11,6 +11,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     
+{% if site.tags != "" %}
+{% include collecttags.html %}
+{% endif %}
 
     {% assign user_url = site.url | append: site.baseurl %}
     {% assign full_base_url = user_url | default: site.github.url %}

@@ -7,7 +7,7 @@ excerpt: '
 '
 comments: true
 mathjax: true
-tags: Ubicomp Healthcare
+tags: ubicomp healthcare
 ---
 
 <!-- <h2>Introduction</h2> -->

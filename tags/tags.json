@@ -1,0 +1,17 @@
+---
+layout: none
+---
+[
+    {% for page in site.pages %}
+        {% if page.tag %}
+            {
+                "tag":"{{ page.tag }}",
+                "size": "{{ page.size}}"
+            },
+        {% endif %}
+    {% endfor %}
+    {
+        "tag": "",
+        "size": ""
+    }
+]

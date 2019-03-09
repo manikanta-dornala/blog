@@ -1,10 +1,22 @@
 <!-- Renders post date, title, and snippet of text. -->
-<div class="py-2 mb-2 prose">
-    <a class="no-underline h5 bold text-accent" title="{{ post.url | prepend: site.baseurl }}"
-        href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+<div class="py-2 mb-2 prose">{% assign wpm = site.words_per_minute | append: '.0' %}
+{% assign readtime = post.content | strip_html | number_of_words | divided_by:wpm | round %}
+
     <h2 class="h1 lh-condensed col-12 mt-0">
         <a class="link-primary" title="{{ post.url | prepend: site.baseurl }}"
             href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
-    <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
+    <a class="no-underline h5 bold text-accent" title="{{ post.url | prepend: site.baseurl }}"
+        href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: "%b %-d, %Y" }}</a>
+    <h5>Reading time ~{% if readtime <= 1 %}1 minute{% else %}{{ readtime }} minutes{% endif %}</p>
+    <p>{{ post.excerpt | strip_html | truncatewords:50 }}</h5>
+    <div  style="overflow: hidden;">
+            <div class="tags" style="white-space: nowrap; overflow-x: auto; overflow-y:hidden; width: 100%; height: 50px">
+                {% for tag in post.tags %}
+                <a href="/tag/{{tag}}"><button class="btn btn-link" style="padding: 5px;">{{tag}}</button></a>
+                {%endfor%}
+            </div>
+        </div>
+    
+    <hr style="opacity: 0.1; width:60%">
 </div>

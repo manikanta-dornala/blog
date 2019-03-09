@@ -68,12 +68,14 @@ fb_appid: 1166944040038372
 
 remote_theme: broccolini/swiss
 permalink: /blog/:title/
+
+words_per_minute:   200
+
 # Build settings
 markdown: kramdown
 theme: jekyll-swiss
 plugins:
   - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
