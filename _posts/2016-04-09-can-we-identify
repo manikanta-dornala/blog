@@ -12,7 +12,7 @@ excerpt: "Identifying the sex of an individual is a challenging problem in
 comments: true
 mathjax: true
 tags: ai machine-learning binary-classification image-processing sex feature-engineering
-feature: "/images/2016-04-09-can-we-discriminate/feature.gif"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/feature.gif"
 ---
 
 ---
@@ -58,7 +58,7 @@ for classification to male and female.
 
 <div class="row">
     <div class="col-md-8">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/figure_1.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/figure_1.png" />
     </div><div class="col-md-4"></div>
 </div>
 
@@ -67,10 +67,10 @@ classification. Following results were obtained.
 
 <div class="row">
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/2.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/2.png" />
     </div>
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/3.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/3.png" />
     </div>
 </div>
 
@@ -80,12 +80,12 @@ The classification accuracy seems to be pretty good around  98%. As expected, S
 
 <div class="row">
     <div class="col-md-12">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/21.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/21.png" />
     </div>
     Nottingham Dataset[^nottinghamdataset]
         
     <div class="col-md-12">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/20.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/20.png" />
     </div>
     Faces94[^faces94dataset]
         
@@ -101,7 +101,7 @@ descriptor[^lowe2004distinctive] is essentially a histogram of gradient
 map of the neighborhood of the descriptor.
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/22.png"   />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/22.png"   />
 </div></div>
 
 We generated key point descriptors in a grid wise manner for every
@@ -151,7 +151,7 @@ This might be the reason for very low performance of this method.
 
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/23.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/23.png"  />
 </div></div>
 
 ### Demonstration
@@ -163,7 +163,7 @@ we have haar cascades for frontal face, all the faces in the frame are
 not detected and hence are not classified.
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/41.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/41.png"  />
 </div></div>
 ### Caveats
 
@@ -197,7 +197,7 @@ learnt. [^PapEvg98]
 ### Data Set Used
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/24.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/24.png"  />
 </div></div>
 
 MIT Pedestrian Dataset was used[^mitdataset]
@@ -245,7 +245,7 @@ MIT Pedestrian Dataset was used[^mitdataset]
 ### Online Port
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/12.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/12.png"  />
 </div></div>
 
 ### Demonstration
@@ -256,7 +256,7 @@ detect people driving their bycycles too. It can bee seen that this was
 very much a possible result. The redbox around the woman’s body indicates that here sex is female
 based on her full body features.
 <div class="row"><div class="col-md-12">
-<img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/42.png"  />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/42.png"  />
 </div></div>
 
 ## Motion Based Features
@@ -276,7 +276,7 @@ walking speed and clutter background.
 For our purpose gait images are background subtracted images of persons
 motion across a scene at different times in an interval.
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/10.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/10.png"  />
 </div></div>
 
 Data Set used is CASIA Gait Data Set[^gaitdataset]
@@ -299,10 +299,10 @@ is the binary silhouttes image pixel at frame $$t(i,j)$$ with $$i,j$$ as
 coordinates.
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/7.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/7.png"  />
 </div></div>
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/8.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/8.png"  />
 </div></div>
 
 
@@ -355,7 +355,7 @@ was expected is a very good classifiers for this two class problem.
 ### Online Port
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/13.png"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/13.png"  />
 </div></div>
 
 ### Problem with an online version
@@ -376,26 +376,26 @@ was expected is a very good classifiers for this two class problem.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/31.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/31.png" />
     </div>
     
 </div>
 Theses images  are normal gaits extracted. If we use these directly the accuracy is a bit low 70$$\%$$. This might be because we are unable to quantify what stride to use.
 <div class="row">
     <div class="col-md-6">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/32.png" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/32.png" />
     </div>
 </div>
 These are Average gaits. As was reported they provide an accuracy of  91$$\%$$.
 <div class="row">
     <div class="col-md-6">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/33.png" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/33.png" />
     </div>
 </div>
 These are Halo subtracted Average gaits (Cores). These seem to capture the body features of an individual in a normalized fashion.    They surprisingly provide us with an accuracy of  87$$\%$$
 <div class="row">
     <div class="col-md-6">
-        <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/34.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/34.png" />
     </div>
 </div>
 The images to right are just the Halos around the cores, they capture the body motions effectively, Even they provide us an accuracy of  86$$\%$$.
@@ -413,7 +413,7 @@ greater success rates.
 ### Explained Variance for PCA reduction
 
 <div class="row"><div class="col-md-12">
-    <img src="{{ site.url }}/images/2016-04-09-can-we-discriminate/9.jpg"  />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-09-can-we-discriminate/9.jpg"  />
 </div></div>
 Optimal Value of N turns out to be close to 30\
 This gives us an idea that the entire motion can most probably be
@@ -429,7 +429,7 @@ Here's a presentation...
 
 <a href="https://github.com/HMAP/Online_Pedestrian_Sex_Identification" target="_blank"><i class="fa fa-3x fa-github"></i></a><br>
 and a 
-<a href="{{ site.url }}/reports/A Survey on Human Sex Determination Methods.pdf" target="_blank"><button class="btn btn-default">Report</button></a>
+<a href="{{ site.url }}{{ site.baseurl }}/reports/A Survey on Human Sex Determination Methods.pdf" target="_blank"><button class="btn btn-default">Report</button></a>
 </div></div>
 
 ## References

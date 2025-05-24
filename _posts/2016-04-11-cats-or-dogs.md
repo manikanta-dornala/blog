@@ -5,7 +5,7 @@ date: 2016-04-11
 excerpt: "In this experiment we'll train a machine to distinguish between cats and dogs. We'll be using Support vector machines for the same."
 comments: true
 tags: ai machine-learning binary-classification random-forests
-feature: "/images/2016-04-11-cats-or-dogs/feature.jpg"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-04-11-cats-or-dogs/feature.jpg"
 ---
 
 <!-- +++++ Post +++++ -->
@@ -266,7 +266,7 @@ Random forest in general seem faster and better than using a SVM for this partic
 The below graph suggests that even Random Forests saturate at around 60% accuracy.
 
 <center>
-    <img src="{{site.url}}/images/2016-04-11-cats-or-dogs/RFC.png" style="width:50%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-04-11-cats-or-dogs/RFC.png" style="width:50%" />
 </center>
 
 <h3> Multiclass Classification</h3>

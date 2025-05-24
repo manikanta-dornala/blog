@@ -8,7 +8,7 @@ excerpt: '
 comments: true
 mathjax: true
 tags: machine-learning ai reinforcement-learning
-feature: "/images/2018-02-19-td-learning/randomwalk.png"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2018-02-19-td-learning/randomwalk.png"
 ---
 
 ## Multi Step Prediction Problem
@@ -73,7 +73,7 @@ In the first experiment, we try to understand how varying $$\lambda$$ affects th
 Each set is presented to the learner until the value vector no longer changes (slightly maybe). The change ($$\delta w$$) was measured between successive values of weight vector and if its norm is less than a tolerance (0.01) we stop updating and then we measure the RMS error for this set. Also, if the vector doesn’t converge within 100 steps, it’s assumed to be diverging (although this never happened in the experiment ran. $$w$$ always converged within 100 iterations, for small 0.01.)  Now the error over all the sets is averaged, to receive the error for one particular $$\lambda$$.
 
 <div class="row"> <div class="col-md-12">
-    <img src="{{ site.url }}/images/2018-02-19-td-learning/Figure_1.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2018-02-19-td-learning/Figure_1.png" style="width:75%" />
 </div>
 </div>
 Quite surprisingly (or not) $$\lambda=1$$ has the highest error. We might expect that the $$TD(1)$$ procedure should have induced the least error, as it considers everything and minimized error between predictions and actual outcomes. But all it does is reduce only it. It doesn’t account for anything else, that might come up in future, which leads to an accumulated error.
@@ -82,7 +82,7 @@ This can be seen by running the algorithm only once instead of waiting for conve
 
 <div class="row">
 <div class="col-md-12">
-    <img src="{{ site.url }}/images/2018-02-19-td-learning/Figure_1-1.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2018-02-19-td-learning/Figure_1-1.png" style="width:75%" />
 </div>
 </div>
 
@@ -97,7 +97,7 @@ $$\alpha=0$$ implies no learning and final vector is same as the other, so the e
 
 
 <div class="row"> <div class="col-md-12">
-    <img src="{{ site.url }}/images/2018-02-19-td-learning/Figure_2.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2018-02-19-td-learning/Figure_2.png" style="width:75%" />
 </div></div>
 This suggests that a small $$\alpha$$ doesn’t do anything and a high $$\alpha$$ hurries so much that the it forgets things. There is sweet spot in between where we can optimally learn and be fast as well.
 
@@ -107,7 +107,7 @@ Although this graph looks a bit different from the one in paper, consider the gr
 We have already experimented what would happen for a small $$\alpha$$. What happens for the Best $$\alpha$$? To figure this out we have the same protocol followed in experiment 2. But with a change. We computed the best $$\alpha$$ for every $$\lambda$$, as per experiment 2 and we notice the best performer is now somewhere around $$\lambda=0.2$$ and not $$\lambda=0$$ as was in experiment 1. With $$\alpha$$ values ranging between $$[0.2,\ 0.05]$$, we have learnt the least error generating weight with one presentation of the data itself. Notice how the errors are in general the same (perhaps less), even though the data has been presented only once. 
 
 <div class="row"> <div class="col-md-12">
-    <img src="{{ site.url }}/images/2018-02-19-td-learning/Figure_3.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2018-02-19-td-learning/Figure_3.png" style="width:75%" />
 </div></div>
 
 So, a TD approach allowed us to learn faster. Only $$\lambda=1$$ required $$0.05$$, (it diverged otherwise), the rest could afford a faster learning.

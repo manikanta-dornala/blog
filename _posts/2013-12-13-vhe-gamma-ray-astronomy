@@ -5,7 +5,7 @@ date: 2013-12-13
 project: true
 excerpt: "We study the processes of interaction of gamma rays, formation of extensive air showers, imaging of the Cherenkov radiation and data analysis of the observed data of Crab Nebula and MRK421 using TACTIC at Mt. Abu, India."
 comments: true
-feature: "/images/2013-12-13-vhe-gamma-ray-astronomy/feature.jpg"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2013-12-13-vhe-gamma-ray-astronomy/feature.jpg"
 tags: gamma-rays astronomy telescopes nebula hocus-pocus image-processing
 ---
 

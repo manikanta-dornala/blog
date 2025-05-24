@@ -23,7 +23,7 @@ excerpt: "
 comments: true
 mathjax: true
 tags: security machine-learning lstm ai intrusion-detection
-feature: "/images/2017-04-28-fishy-cyber-attack-detection/plant.jpg"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/plant.jpg"
 ---
 
 
@@ -77,7 +77,7 @@ In order to illustrate the working of the system, we simulate a simple
 water plant, that circulates hot water between two tanks.
 <div class="row">
 <div class="col-md-12">
-    <img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/plant.jpg" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/plant.jpg" style="width:75%" />
 </div>
 </div>
 
@@ -128,7 +128,7 @@ formal method based on decidability matrices was presented by Hashimoto
 
 <div class="row">
 <div class="col-md-12">
-    <img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/ControlNetwork.png" style="width:50%"/>
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/ControlNetwork.png" style="width:50%"/>
 </div>
 </div>
 
@@ -144,7 +144,7 @@ of variance.
 
 <div class="row">
 <div class="col-md-12">
-    <img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/Normal_Functioning_PCA.jpg" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/Normal_Functioning_PCA.jpg" style="width:75%" />
 </div></div>
 
 The order of variance is as follows; blue, green, red in decreasing
@@ -159,7 +159,7 @@ depressurizes.
 The attack begins at simulation point 500.
 <div class="row">
 <div class="col-md-12">
-<img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_PCA.jpg" style="width:75%" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_PCA.jpg" style="width:75%" />
 </div></div>
 
 There is drastic change in the behavior of the projection in blue. Any
@@ -193,7 +193,7 @@ remembers what’s important and forgets the trivial things. It is capable
 of learning patterns in data and identify those that don’t match.
 <div class="row">
 <div class="col-md-12">
-<img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/lstm.png" style="width:75%" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/lstm.png" style="width:75%" />
 </div></div>
 
 LSTM achieves this by what are termed as memory control gates in the
@@ -210,7 +210,7 @@ sequence of data generated is in high correlation with data generated
 during normal functioning.
 <div class="row">
 <div class="col-md-12">
-<img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/Normal_Functioning_NN.jpg"  style="width:75%" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/Normal_Functioning_NN.jpg"  style="width:75%" />
 </div></div>
 
 Normal functioning ensures a score match near close to 1, which is
@@ -220,7 +220,7 @@ Here we compromise zone2 in a similar fashion. Both P and V1 are set to
 0 here.
 <div class="row">
 <div class="col-md-12">
-<img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_NN_0_0.jpg" style="width:75%" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_NN_0_0.jpg" style="width:75%" />
 </div></div>
 
 It is to be noted that when the zone is compromised, the running of the
@@ -229,7 +229,7 @@ us a correlation score with the actual pattern of functioning, which in
 this case, when P is set to 0 averages around a value of 0.85.
 <div class="row">
 <div class="col-md-12">
-<img src="{{ site.url }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_NN_1_1.jpg" style="width:75%" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-28-fishy-cyber-attack-detection/Compromised_Functioning_NN_1_1.jpg" style="width:75%" />
 </div>
 </div>
 When the variable P is set to 1, the pattern of execution produces

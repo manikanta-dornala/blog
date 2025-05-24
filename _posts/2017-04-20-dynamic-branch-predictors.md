@@ -20,7 +20,7 @@ excerpt:
     and SPECfp2006 benchmark suites.
 comments: true
 tags: processor-architecture branch-predictors 
-feature: "/images/2017-04-20-dynamic-branch-predictors/MIPS_Architecture.png"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/MIPS_Architecture.png"
 mathjax: true
 ---
 ## Direction Predictors
@@ -32,7 +32,7 @@ computation, can reach miss rates as low as $$10\%$$ in certain programs,
 with a general accuracy of around $$60\%$$.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/static.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/static.png" style="width:75%" />
     <p class="caption">Performance of Static Predictor on benchmark programs </p>
 </div></div>
 
@@ -66,7 +66,7 @@ e-gskew predictor. An e-gskew predictor has 3 banks a bi-modal and two
 gshare banks, a majority vote of the three is taken for the prediction.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/gskew.png" alt=" Skewed Branch Predictor (Seznec and Michaud 1999)" style="width:75.0%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/gskew.png" alt=" Skewed Branch Predictor (Seznec and Michaud 1999)" style="width:75.0%" />
     <p class="caption"> Skewed Branch Predictor
     </p>
 </div></div>
@@ -89,7 +89,7 @@ biased static branches. Thus, once the metapredictor has recognised
 biased branches the other tables are not updated.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/gskew2.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/gskew2.png" style="width:75%" />
     <p class="caption">Performance of Gskew Predictor on benchmark programs (Stage 5) </p>
 </div></div>
 
@@ -104,7 +104,7 @@ have properties that make it easy to implement on the chip.
 
 <div class="row">
 <div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/percp.png"/>
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/percp.png"/>
     <!-- <p class="caption"> -->
 
 
@@ -149,7 +149,7 @@ forms the weights fluctuate around 0.
     previously discussed algorithm and is written back into the table.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/percp2.png"
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/percp2.png"
         style="width:55.0%" />
     <p class="caption">Perceptron Predictor Block Diagram. The branch address is hashed to select a perceptron that is read from
         the table. Together with the global history register, the output of the perceptron is computed, giving the prediction.
@@ -167,7 +167,7 @@ linear increase in space is what gives us an incentive to study
 perceptrons.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/perceptron.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/perceptron.png" style="width:75%" />
     <p class="caption">Performance of Perceptron Predictor on benchmark programs (Stage 5) </p>
 </div></div>
 
@@ -196,7 +196,7 @@ table, in case of mis default predictor is used. Here is a simple flow
 chart of 5-component tage predictor.
 
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/tage2.png" 
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/tage2.png" 
         style="width:75.0%" />
     <p class="caption"> A 5-component TAGE predictor synopsis: A base predictor is backed with several tagged predictors components indexed using
         increasing history length</p>
@@ -211,7 +211,7 @@ is correct otherwise it is decremented. Each is a two bit counter. Exact
 details of update procedure of various counters can be found here
 [(Scheznec 2006)](seznec2006case).
 <div class="row" ><div class="col-md-8">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/tage1.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/tage1.png" style="width:75%" />
     <p class="caption"> Performance of Tage Predictor on benchmark programs (Stage 5)</p>
 </div></div>
 
@@ -296,32 +296,32 @@ have used in our analysis.
 
 <div class="row">
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/bzip2.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/bzip2.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on bzip2 </p>
 </div>
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/hmmer.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/hmmer.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on hmmer</p>
 </div>
 </div>
 <div class="row">
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/omnetpp.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/omnetpp.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on omnetpp </p>
 </div>
 
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/perlbench.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/perlbench.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on perlbench </p>
 </div>
 </div>
 <div class="row">
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/soplex.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/soplex.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on soplex </p>
 </div>
 <div class="col-lg-6">
-    <img src="/images/2017-04-20-dynamic-branch-predictors/xalanbmk.png" style="width:75%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-20-dynamic-branch-predictors/xalanbmk.png" style="width:75%" />
     <p class="caption">Performance of Direction Predictors on xalanbmk </p>
 </div>
 </div>

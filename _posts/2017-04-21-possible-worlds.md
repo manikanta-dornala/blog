@@ -12,7 +12,7 @@ excerpt: "
 "
 comments: true
 tags: philosophy logic non-classical-logic
-feature: "/images/2017-04-21-possible-worlds/feature.jpg"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2017-04-21-possible-worlds/feature.jpg"
 ---
 
 
@@ -43,7 +43,7 @@ concluded that, “The universe that God chose to exist is the best of all
 possible worlds”.[^2]
 
 <center>
-    <img src="{{site.url}}/images/2017-04-21-possible-worlds/possible-worlds.jpg" style="width:50%" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2017-04-21-possible-worlds/possible-worlds.jpg" style="width:50%" />
 </center>
 But I believe that the arguments of *theodicy*, assume that a there
 exists a metric to compare the worlds. There seems to be an unchallenged

@@ -19,55 +19,55 @@ title: Arcane Reveries
 #   Write an awesome description for your new site here. You can edit this
 #   line in _config.yml. It will appear in your document head meta (for
 #   Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/blog" # the subpath of your site, e.g. /blog
 
-url: "https://manikantareddyd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-description: "This is about Mani, a developer, a curious mind and an amateur astronomer. I heard that you wanted to know me, so here you go."
+url: "https://manikanta-dornala.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+description: "Musings of curious developer"
 # twitter_username: jekyllrb
 keywords: "Arcane Reveries, Manikanta Reddy D"
 collections:
   work:
 
-email:              manikanta.reddy.d@outlook.com
-twitter:            ManikantaReddyD
-facebook:           Manikanta.D.Reddy
-github:             ManikantaReddyD
+# email:              manikanta.reddy.d@outlook.com
+# twitter:            ManikantaReddyD
+# facebook:           Manikanta.D.Reddy
+github:             manikanta-dornala
 stackoverflow:     6345500/manikanta-reddy-d
-linkedin:          ManikantaDReddy
+linkedin:          manikantadornala
 #xing:              username
 #instagram:          username
-lastfm:            ManikantaReddy
+# lastfm:            ManikantaReddy
 #tumblr:            username
 #pinterest:         username
 #foursquare:        username
 #steam:              username
 #dribbble:          username
 # youtube:           UCnwMLnk0Z61kFt3igpCkrvQ
-soundcloud:        ManikantaReddyD
+# soundcloud:        ManikantaReddyD
 #weibo:             username
 #flickr:            username
 #codepen:           username
 #keybase:           username
 #xmpp:              username@server.com
 #hackernews:        username
-spotify: 12185478274
-reddit: ManikantaReddyD
-skype: manikanta.reddy.d
+# spotify: 12185478274
+# reddit: ManikantaReddyD
+# skype: manikanta.reddy.d
 
 
-analytics:
-  facebook: 1974458362838018
+# analytics:
+#   facebook: 1974458362838018
 
 bing:
     validate: "10805F027940A5586DCE409A0027B30F"
 
 disqus_shortname:   manikantareddyd
 
-fbcomments: 1
-fb_appid: 1166944040038372
+# fbcomments: 1
+# fb_appid: 1166944040038372
 
 remote_theme: broccolini/swiss
-permalink: /blog/:title/
+permalink: /posts/:title/
 
 words_per_minute:   200
 

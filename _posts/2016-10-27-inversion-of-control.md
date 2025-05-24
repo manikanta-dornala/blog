@@ -4,7 +4,7 @@ title: "Inversion of Control"
 date: 2016-10-27
 excerpt: "A sample implementation of the Inversion of Control principle with a comparative analysis of the approach with a traditional formulation of the same problem."
 comments: true
-feature: "/images/2016-10-27-inversion-of-control/feature.png"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-10-27-inversion-of-control/feature.png"
 tags: software-engineering dependency-injection
 code: 1
 ---

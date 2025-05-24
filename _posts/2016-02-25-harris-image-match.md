@@ -5,7 +5,7 @@ date: 2016-02-25
 excerpt: "How well can we compare two images?"
 comments: true
 tags: image-processing interest-points feature-descriptors
-feature: "/images/2016-02-25-harris-image-match/feature.jpg"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-02-25-harris-image-match/feature.jpg"
 ---
 
 <!-- # Harris Point Detection and Image Matching -->

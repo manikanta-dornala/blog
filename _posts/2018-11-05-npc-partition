@@ -6,7 +6,7 @@ excerpt: 'We show that the two partition problem is NP Complete.'
 comments: true
 mathjax: true
 tags: algorithms complexity
-feature: "/images/2018-11-05-npc-partition/main.png"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2018-11-05-npc-partition/main.png"
 ---
 <p>We have <span class="math inline"><em>n</em></span> items each having a value <span class="math inline"><em>s</em><sub><em>i</em></sub></span>. We have to create two buckets(<span class="math inline"><em>A</em></span>, <span class="math inline"><em>B</em></span>) with all of the <span class="math inline"><em>n</em></span> items such that total value of first bucket is same as the second. We put some in <span class="math inline"><em>A</em></span> (<span class="math inline"><em>s</em><sub><em>a</em>1</sub>, ...<em>s</em><sub><em>a</em><em>x</em></sub></span>) and some in <span class="math inline"><em>B</em></span> (<span class="math inline"><em>s</em><sub><em>b</em>1</sub>, ..., <em>s</em><sub><em>b</em><em>y</em></sub></span>) then we have</p>
 <p><br /><span class="math display">$$\sum_{k=1}^x s_{ak} = \sum_{k=1}^y s_{bk}$$</span><br /></p>

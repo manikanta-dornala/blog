@@ -4,7 +4,7 @@ title: "Psychotherapist chatbot - Doctor.el"
 date: 2016-01-11
 excerpt: "We study the behaviour of the Emacs Psychotherapist programme and thereby make some changes to the source of program <i>doctor.el</i> and hope to bring about some change in the way how the program interacts with us."
 comments: true
-feature: "/images/2016-01-11-doctor-el-chatbot/feature.png"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-01-11-doctor-el-chatbot/feature.png"
 tags: doctor ai chat-bot lisp eliza emacs
 ---
 

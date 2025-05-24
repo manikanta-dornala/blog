@@ -11,7 +11,7 @@ neck."
 tags: ai machine-learning binary-classification image-processing feature-engineering deep-learning neural-networks 
 mathjax: true
 comments: true
-feature: "/images/2016-11-16-ultrasound-nerve-segmentation/feature.gif"
+feature: "{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/feature.gif"
 ---
 
 
@@ -48,7 +48,7 @@ The region of our interest is a collection of nerve structures called
 and into the armpit.
 
 <div class="row"><div class="col-md-8">
-    <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/Brachial_Plexus.jpg"/>
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/Brachial_Plexus.jpg"/>
 </div></div>
 
 <div class="row"><div class="col-md-8">Brachial Plexus</div></div>
@@ -70,11 +70,11 @@ other is the human annotation.
 
 <div class="row">
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/47_117.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/47_117.png" />
         Image: 47_117
     </div>
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/47_117_mask.png" />
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/47_117_mask.png" />
         Image: 47_117_mask
     </div>
 </div>
@@ -192,10 +192,10 @@ class.
 
 <div class="row">
     <div class="col-md-6">
-        <img width="60%" src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/Selection_001.png" />
+        <img width="60%" src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/Selection_001.png" />
     </div>
     <div class="col-md-6">
-        <img width="60%" src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/Selection_002.png" />
+        <img width="60%" src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/Selection_002.png" />
     </div>
 </div>
 
@@ -286,7 +286,7 @@ distinguish pixels of the nerve structure from the rest.
 
 <div class="row">
 <div class="col-md-8">
-<img id="fig:autoencoder" src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/Autoencoder_structure.png"/>
+<img id="fig:autoencoder" src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/Autoencoder_structure.png"/>
 </div></div>
 
 
@@ -315,7 +315,7 @@ path with the up-sampling features in the expanding path.
 
 <div class="row">
 <div class="col-md-8">
-<img id="fig:unet" src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/unet.png"/>
+<img id="fig:unet" src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/unet.png"/>
 </div></div>
 <div class="row"><div class="col-md-8"> U-net architecture</div></div>
 
@@ -346,11 +346,11 @@ learning. They represent what kind of input ,*excites*, the filters.
 
 <div class="row">
     <div class="col-md-5" padding="0" width="100%">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/autoencoder_dream.png"/>
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/autoencoder_dream.png"/>
         Auto Encoder's Dream
     </div>
     <div class="col-md-5">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/unet_dream.png"/>
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/unet_dream.png"/>
         U-net's dream
     </div>
 </div>
@@ -380,7 +380,7 @@ outputs. But this solution, puts forward a serious problem.
 <div class="row">
 <div class="col-md-2"></div>
 <div class="col-md-4">
-    <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/holes.png" />
+    <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/holes.png" />
     Discontinuity in mask generation
 </div>
 <div class="col-md-4"></div>
@@ -412,11 +412,11 @@ to generate masks, that look like human annotated masks.
 
 <div class="row">
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/probability_mask.png"/>
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/probability_mask.png"/>
         Probability Mask
     </div>
     <div class="col-md-4">
-        <img src="{{ site.url }}/images/2016-11-16-ultrasound-nerve-segmentation/pca_cleaned.png"/>
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2016-11-16-ultrasound-nerve-segmentation/pca_cleaned.png"/>
         PCA transform of the Mask
     </div>
 </div>

@@ -14,7 +14,7 @@ sitemap:
     <input class="form-control" type="text" v-model="search" placeholder="Type Something...">
     <table class="table table-hover" >
         <tr v-for="data in result" >
-            <td><a :href="'{{ site.url }}/tag/'+data.tag">(% data.tag %)</a></td>
+            <td><a :href="'{{ site.url }}{{ site.baseurl }}/tag/'+data.tag">(% data.tag %)</a></td>
             <td>(%data.size %)</td>
         </tr>
     </table>

@@ -38,7 +38,7 @@ to true optimal values over time.
 $s$\ -->
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/alg_offpolicyq.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/alg_offpolicyq.png">
     </div>
 </div>
 
@@ -135,7 +135,7 @@ initial state $s$ and a fifo queue buffer $\mathcal{B}$ of finite size\ -->
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/alg_offpolicydeepq.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/alg_offpolicydeepq.png">
     </div>
 </div>
 
@@ -151,7 +151,7 @@ landing of a module on the surface of moon.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/lunar_lander.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/lunar_lander.png">
     </div>
 </div>
 
@@ -180,10 +180,10 @@ as below.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/vanilla_dqn_train.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/vanilla_dqn_train.png">
     </div>
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/vanilla_dqn_test.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/vanilla_dqn_test.png">
     </div>
 </div>
 
@@ -234,10 +234,10 @@ avoiding the ground.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/double_dqn_train.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/double_dqn_train.png">
     </div>
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/double_dqn_test.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/double_dqn_test.png">
     </div>
 </div>
 
@@ -266,10 +266,10 @@ other hyperparameters as in \[ddqn\]
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/p_double_dqn_train.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/p_double_dqn_train.png">
     </div>
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/p_double_dqn_test.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/p_double_dqn_test.png">
     </div>
 </div>
 
@@ -286,7 +286,7 @@ depth of model by the number of layers.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/model_complexity.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/model_complexity.png">
     </div>
 </div>
 
@@ -301,7 +301,7 @@ network, the reward increases!
 <!-- ![image](model_depth){width="0.8\linewidth"} -->
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/model_depth.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/model_depth.png">
     </div>
 </div>
 
@@ -321,7 +321,7 @@ of the target model.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/update_rate.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/update_rate.png">
     </div>
 </div>
 
@@ -345,7 +345,7 @@ increase in population.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/preferential_memory.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/preferential_memory.png">
     </div>
 </div>
 
@@ -370,7 +370,7 @@ $\gamma$ and $\epsilon$ decay
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/eg.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/eg.png">
     </div>
 </div>
 
@@ -394,7 +394,7 @@ any prior knowledge of the same.
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/the_one.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/the_one.png">
     </div>
 </div>
 
@@ -519,10 +519,10 @@ to handpick producing a $222$ mean score!!!
 
 <div class="row">
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/pid.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/pid.png">
     </div>
     <div class="col-md-6">
-        <img src="/images/2018-03-03-learning-to-land-on-moon/pid_corrections.png">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/2018-03-03-learning-to-land-on-moon/pid_corrections.png">
     </div>
 </div>
 
